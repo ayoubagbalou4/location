@@ -2,12 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import DatePicker from 'react-datepicker';
-import 'react-datepicker/dist/react-datepicker.css'; 
+import 'react-datepicker/dist/react-datepicker.css';
+import Swal from 'sweetalert2';
 
 const SingleCar = () => {
     const { id } = useParams();
     const [car, setCar] = useState(null);
     const [loading, setLoading] = useState(true);
+    const [vehicleBasePrice, setVehicleBasePrice] = useState(null);
 
     useEffect(() => {
         const fetchCar = async () => {
@@ -16,6 +18,7 @@ const SingleCar = () => {
                     `api/vehicules/${id}`
                 );
                 setCar(res.data);
+                setVehicleBasePrice(res.data.prix);
             } catch (err) {
                 console.error('❌ Erreur lors de la récupération de la voiture:', err);
             } finally {
@@ -39,7 +42,6 @@ const SingleCar = () => {
     });
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
-    const [vehicleBasePrice, setVehicleBasePrice] = useState(72);
     const driverDailyCost = 30;
 
     const handleChange = (e) => {
@@ -93,6 +95,7 @@ const SingleCar = () => {
     }, [formData.date_depart, formData.date_fin, formData.chauffeur_exist, vehicleBasePrice]);
 
 
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         setError('');
@@ -102,6 +105,7 @@ const SingleCar = () => {
             setError('Please fill in all required fields (Phone, Date of Birth).');
             return;
         }
+
         if (new Date(formData.date_fin) < new Date(formData.date_depart)) {
             setError('Drop off date cannot be before Pick up date.');
             return;
@@ -112,18 +116,25 @@ const SingleCar = () => {
                 ...formData,
                 date_depart: formData.date_depart.toISOString().split('T')[0],
                 date_fin: formData.date_fin.toISOString().split('T')[0],
-                date_naissance: formData.date_naissance, // Assuming API accepts YYYY-MM-DD string
-                // Ensure chauffeur_id is null if chauffeur_exist is false
+                date_naissance: formData.date_naissance,
                 chauffeur_id: formData.chauffeur_exist ? formData.chauffeur_id : null
             };
 
-            console.log("Submitting:", submissionData); // For debugging
+            console.log("Submitting:", submissionData);
 
-            // Replace '/api/reservations' with your actual API endpoint
             const response = await axios.post('/api/reservations', submissionData);
 
-            setSuccess('Reservation created successfully!');
-            setFormData({});
+            if(response.data.message){
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success!',
+                    text: 'Reservation created successfully!',
+                    confirmButtonColor: '#3085d6'
+                });
+    
+                setFormData({});
+            }
+
 
         } catch (err) {
             console.error("Submission error:", err.response || err);
@@ -131,6 +142,7 @@ const SingleCar = () => {
             setSuccess('');
         }
     };
+
 
 
 
@@ -261,7 +273,8 @@ const SingleCar = () => {
                                         <div className="col-auto">
                                             <div className="text-14 text-light-1">
                                                 From
-                                                <span className="text-20 fw-500 text-dark-1 ml-5">US${vehicleBasePrice}</span>
+                                                <span className="text-20 fw-500 text-dark-1 ml-5">
+                                                    {vehicleBasePrice} MAD</span>
                                                 <span className="text-14 text-light-1">/day</span>
                                             </div>
                                         </div>
@@ -303,6 +316,7 @@ const SingleCar = () => {
 
                                             {/* Drop off Date */}
                                             <div className="col-12">
+
                                                 <div className="searchMenu-date px-20 py-10 border-light rounded-4">
                                                     <h4 className="text-15 fw-500 ls-2 lh-16 mb-1">Drop off Date</h4>
                                                     <DatePicker
@@ -311,13 +325,16 @@ const SingleCar = () => {
                                                         selectsEnd
                                                         startDate={formData.date_depart}
                                                         endDate={formData.date_fin}
-                                                        minDate={formData.date_depart} // Cannot be before start date
+                                                        minDate={formData.date_depart}
                                                         dateFormat="EEE d MMM"
                                                         className="text-15 text-light-1 ls-2 lh-16 custom-date-picker"
                                                         wrapperClassName="w-100"
                                                     />
                                                 </div>
+
                                             </div>
+
+
 
                                             {/* Phone Number */}
                                             <div className="col-12">
@@ -331,7 +348,7 @@ const SingleCar = () => {
                                                         value={formData.numero_tel}
                                                         onChange={handleChange}
                                                         className="text-15 text-light-1 ls-2 lh-16 mt-1 w-100 border-0"
-                                                        required
+                                                        
                                                     />
                                                 </div>
                                             </div>
@@ -347,7 +364,7 @@ const SingleCar = () => {
                                                         value={formData.date_naissance}
                                                         onChange={handleChange}
                                                         className="text-15 text-light-1 ls-2 lh-16 mt-1 w-100 border-0"
-                                                        required
+                                                        
                                                     />
                                                 </div>
                                             </div>
@@ -365,7 +382,7 @@ const SingleCar = () => {
                                                         style={{ width: 'auto' }} // Override default browser styles if needed
                                                     />
                                                     <label htmlFor="chauffeur_exist" className="text-15 text-light-1 ls-2 lh-16 mb-0">
-                                                        Add Driver (+US${driverDailyCost}/day)
+                                                        Add Driver (+ {driverDailyCost}/day MAD)
                                                     </label>
                                                 </div>
                                             </div>
@@ -373,7 +390,7 @@ const SingleCar = () => {
                                             {/* Total Amount Display */}
                                             <div className="col-12 mt-10">
                                                 <div className="text-16 fw-500 text-dark-1">
-                                                    Estimated Total: <span className="text-20">US${formData.montant_total.toFixed(2)}</span>
+                                                    Estimated Total: <span className="text-20">{formData.montant_total} MAD</span>
                                                 </div>
                                                 {/* Simple duration display */}
                                                 {new Date(formData.date_fin) >= new Date(formData.date_depart) &&
@@ -400,9 +417,9 @@ const SingleCar = () => {
                                             {/* Submit Button */}
                                             <div className="col-12 mt-20">
                                                 <button
-                                                    type="submit" // Changed to type="submit"
+                                                    type="submit"
                                                     className="button -dark-1 py-15 px-35 h-60 col-12 rounded-4 bg-yellow-1 text-dark-1"
-                                                    disabled={success} // Optionally disable after success
+                                                    disabled={success}
                                                 >
                                                     {success ? 'Booked!' : 'Book Now'}
                                                 </button>
