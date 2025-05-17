@@ -13,6 +13,9 @@ import CarsAdmin1 from './Components/Admin/Pages/Page1'
 import CarsAdmin2 from './Components/Admin/Pages/Page2' 
 import CarsAdmin3 from './Components/Admin/Pages/Cars' 
 import CarsAdmin4 from './Components/Admin/Pages/Page4' 
+import About from './Components/Pages/About';
+import Contact from './Components/Pages/Contact';
+import HomeAdmin from './Components/Admin/Home/Home' 
 
 
 function App() {
@@ -28,8 +31,14 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/Cars' element={<Cars />} />
         <Route path="/car/:id" element={<CarDetail />} />
-        {/* <Route path="/Admin/Dashboard/:id" element={<Dashboard />} /> */}
+        <Route path="/Admin/Dashboard/:id" element={<NavbarAdmin />} /> 
         <Route path="/Admin/Dashboard/Cars" element={<NavbarAdmin><CarsAdmin3 /></NavbarAdmin>} />
+        <Route path="/About" element={<About />} /> 
+        <Route path="/Contact" element={<Contact />} /> 
+
+        <Route path="/Admin/Dashboard/Cars" element={<NavbarAdmin><CarsAdmin3 /></NavbarAdmin>} />
+        <Route path="/Admin/Dashboard" element={<NavbarAdmin><HomeAdmin /></NavbarAdmin>} />
+  
     
       </Routes>
     </BrowserRouter>
@@ -37,3 +46,4 @@ function App() {
 }
 
 export default App
+

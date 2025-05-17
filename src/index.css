@@ -13,4 +13,16 @@ code {
 }
 
 
+.bg-whatsapp {
+  background-color: green;
+  margin: 2px 0;
+}
 
+.bg-appel {
+  background-color: blue;
+  margin: 2px 0;
+}
+.bg-sms {
+  background-color: orange;
+  margin: 2px 0;
+}

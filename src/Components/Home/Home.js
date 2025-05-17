@@ -58,8 +58,8 @@ function Homme() {
           <div data-anim-child="slide-up delay-1" className="row justify-center text-center">
             <div className="col-auto">
               <div className="sectionTitle -md">
-                <h2 className="sectionTitle__title">Why Choose Us</h2>
-                <p className=" sectionTitle__text mt-5 sm:mt-0">These popular destinations have a lot to offer</p>
+                <h2 className="sectionTitle__title">Pourquoi Nous Choisir ?</h2>
+                <p className="sectionTitle__text mt-5 sm:mt-0">L'excellence automobile à votre service</p>
               </div>
             </div>
           </div>
@@ -67,48 +67,39 @@ function Homme() {
           <div className="row y-gap-40 justify-between pt-40 sm:pt-20">
 
             <div data-anim-child="slide-up delay-2" className="col-lg-4 col-sm-6">
-
               <div className="featureIcon -type-1 -hover-shadow px-50 py-50 lg:px-24 lg:py-15">
                 <div className="d-flex justify-center">
-                  <img src="#" data-src="img/featureIcons/2/1.svg" alt="image" className="js-lazy" />
+                  <img src="#" data-src="img/featureIcons/2/1.png" alt="Garantie Prix" className="js-lazy"/>
                 </div>
-
                 <div className="text-center mt-30">
-                  <h4 className="text-18 fw-500">Best Price Guarantee</h4>
-                  <p className="text-15 mt-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <h4 className="text-18 fw-500">Meilleur Prix Garanti</h4>
+                  <p className="text-15 mt-10">Nous égalons tout prix inférieur trouvé ailleurs ! Transactions transparentes sans frais cachés.</p>
                 </div>
               </div>
-
             </div>
 
             <div data-anim-child="slide-up delay-3" className="col-lg-4 col-sm-6">
-
               <div className="featureIcon -type-1 -hover-shadow px-50 py-50 lg:px-24 lg:py-15">
                 <div className="d-flex justify-center">
-                  <img src="#" data-src="img/featureIcons/2/2.svg" alt="image" className="js-lazy" />
+                  <img src="#" data-src="img/featureIcons/2/2.png" alt="Réservation Rapide" className="js-lazy"/>
                 </div>
-
                 <div className="text-center mt-30">
-                  <h4 className="text-18 fw-500">Easy & Quick Booking</h4>
-                  <p className="text-15 mt-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <h4 className="text-18 fw-500">Réservation Express</h4>
+                  <p className="text-15 mt-10">Processus en 3 étapes • Confirmation immédiate • Paiement sécurisé</p>
                 </div>
               </div>
-
             </div>
 
             <div data-anim-child="slide-up delay-4" className="col-lg-4 col-sm-6">
-
               <div className="featureIcon -type-1 -hover-shadow px-50 py-50 lg:px-24 lg:py-15">
                 <div className="d-flex justify-center">
-                  <img src="#" data-src="img/featureIcons/2/3.svg" alt="image" className="js-lazy" />
+                  <img src="#" data-src="img/featureIcons/2/3.png" alt="Assistance" className="js-lazy"/>
                 </div>
-
                 <div className="text-center mt-30">
-                  <h4 className="text-18 fw-500">Customer Care 24/7</h4>
-                  <p className="text-15 mt-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <h4 className="text-18 fw-500">Assistance 24h/24</h4>
+                  <p className="text-15 mt-10">Service client dédié • Assistance routière incluse • Support multilingue</p>
                 </div>
               </div>
-
             </div>
 
           </div>
@@ -249,8 +240,8 @@ function Homme() {
           <div data-anim-child="slide-up delay-1" className="row y-gap-20 justify-center text-center">
             <div className="col-auto">
               <div className="sectionTitle -md">
-                <h2 className="sectionTitle__title">Top Destinations in UK</h2>
-                <p className=" sectionTitle__text mt-5 sm:mt-0">These popular destinations have a lot to offer</p>
+                <h2 className="sectionTitle__title">Destinations Populaires au Maroc</h2>
+                <p className="sectionTitle__text mt-5 sm:mt-0">Découvrez nos meilleures offres de location</p>
               </div>
             </div>
           </div>
@@ -258,99 +249,83 @@ function Homme() {
           <div className="row y-gap-30 pt-40">
 
             <div data-anim-child="slide-up delay-2" className="col-xl-2 col-lg-3 col-sm-6">
-
               <a href="#" className="citiesCard -type-4 d-block text-center">
                 <div className="citiesCard__image size-160 rounded-full mx-auto">
-                  <img className="object-cover js-lazy" src="#" data-src="img/destinations/5/1.png" alt="image" />
+                  <img className="object-cover js-lazy" src="#" data-src="img/destinations/1.png" alt="Marrakech" />
                 </div>
-
                 <div className="citiesCard__content mt-10">
-                  <h4 className="text-18 lh-13 fw-500 text-dark-1">London, UK</h4>
-                  <div className="text-14 text-light-1">From US$29.52 per day</div>
+                  <h4 className="text-18 lh-13 fw-500 text-dark-1">Marrakech</h4>
+                  <div className="text-14 text-light-1">À partir de 250 MAD/jour</div>
                 </div>
               </a>
-
             </div>
 
             <div data-anim-child="slide-up delay-3" className="col-xl-2 col-lg-3 col-sm-6">
-
               <a href="#" className="citiesCard -type-4 d-block text-center">
                 <div className="citiesCard__image size-160 rounded-full mx-auto">
-                  <img className="object-cover js-lazy" src="#" data-src="img/destinations/5/2.png" alt="image" />
+                  <img className="object-cover js-lazy" src="#" data-src="img/destinations/2.png" alt="Casablanca" />
                 </div>
-
                 <div className="citiesCard__content mt-10">
-                  <h4 className="text-18 lh-13 fw-500 text-dark-1">Edinburgh, UK</h4>
-                  <div className="text-14 text-light-1">From US$29.52 per day</div>
+                  <h4 className="text-18 lh-13 fw-500 text-dark-1">Casablanca</h4>
+                  <div className="text-14 text-light-1">À partir de 200 MAD/jour</div>
                 </div>
               </a>
-
             </div>
 
             <div data-anim-child="slide-up delay-4" className="col-xl-2 col-lg-3 col-sm-6">
-
               <a href="#" className="citiesCard -type-4 d-block text-center">
                 <div className="citiesCard__image size-160 rounded-full mx-auto">
-                  <img className="object-cover js-lazy" src="#" data-src="img/destinations/5/3.png" alt="image" />
+                  <img className="object-cover js-lazy" src="#" data-src="img/destinations/3.png" alt="Agadir" />
                 </div>
-
                 <div className="citiesCard__content mt-10">
-                  <h4 className="text-18 lh-13 fw-500 text-dark-1">Manchester, UK</h4>
-                  <div className="text-14 text-light-1">From US$29.52 per day</div>
+                  <h4 className="text-18 lh-13 fw-500 text-dark-1">Agadir</h4>
+                  <div className="text-14 text-light-1">À partir de 180 MAD/jour</div>
                 </div>
               </a>
-
             </div>
 
             <div data-anim-child="slide-up delay-5" className="col-xl-2 col-lg-3 col-sm-6">
-
               <a href="#" className="citiesCard -type-4 d-block text-center">
                 <div className="citiesCard__image size-160 rounded-full mx-auto">
-                  <img className="object-cover js-lazy" src="#" data-src="img/destinations/5/4.png" alt="image" />
+                  <img className="object-cover js-lazy" src="#" data-src="img/destinations/4.png" alt="Fès" />
                 </div>
-
                 <div className="citiesCard__content mt-10">
-                  <h4 className="text-18 lh-13 fw-500 text-dark-1">Liverpool, UK</h4>
-                  <div className="text-14 text-light-1">From US$29.52 per day</div>
+                  <h4 className="text-18 lh-13 fw-500 text-dark-1">Fès</h4>
+                  <div className="text-14 text-light-1">À partir de 170 MAD/jour</div>
                 </div>
               </a>
-
             </div>
 
             <div data-anim-child="slide-up delay-6" className="col-xl-2 col-lg-3 col-sm-6">
-
               <a href="#" className="citiesCard -type-4 d-block text-center">
                 <div className="citiesCard__image size-160 rounded-full mx-auto">
-                  <img className="object-cover js-lazy" src="#" data-src="img/destinations/5/5.png" alt="image" />
+                  <img className="object-cover js-lazy" src="#" data-src="img/destinations/5.png" alt="Tanger" />
                 </div>
-
                 <div className="citiesCard__content mt-10">
-                  <h4 className="text-18 lh-13 fw-500 text-dark-1">Birmingham, UK</h4>
-                  <div className="text-14 text-light-1">From US$29.52 per day</div>
+                  <h4 className="text-18 lh-13 fw-500 text-dark-1">Tanger</h4>
+                  <div className="text-14 text-light-1">À partir de 190 MAD/jour</div>
                 </div>
               </a>
-
             </div>
 
             <div data-anim-child="slide-up delay-7" className="col-xl-2 col-lg-3 col-sm-6">
-
               <a href="#" className="citiesCard -type-4 d-block text-center">
                 <div className="citiesCard__image size-160 rounded-full mx-auto">
-                  <img className="object-cover js-lazy" src="#" data-src="img/destinations/5/6.png" alt="image" />
+                  <img className="object-cover js-lazy" src="#" data-src="img/destinations/6.png" alt="Merzouga" />
                 </div>
-
                 <div className="citiesCard__content mt-10">
-                  <h4 className="text-18 lh-13 fw-500 text-dark-1">Glasgow, UK</h4>
-                  <div className="text-14 text-light-1">From US$29.52 per day</div>
+                  <h4 className="text-18 lh-13 fw-500 text-dark-1">Merzouga</h4>
+                  <div className="text-14 text-light-1">4x4 dès 600 MAD/jour</div>
                 </div>
               </a>
-
             </div>
 
           </div>
         </div>
       </section>
 
+
+      
       <section className="layout-pt-lg layout-pb-lg bg-dark-1">
         <div data-anim-wrap className="container">
           <div data-anim-child="slide-up delay-1" className="row justify-center text-center">
@@ -689,47 +664,6 @@ function Homme() {
         </div>
       </section>
 
-
-      <section data-anim-wrap className="section-bg pt-80 pb-80 md:pt-40 md:pb-40">
-
-        <div data-anim-child="fade delay-1" className="section-bg__item -w-1500 rounded-4 bg-yellow-1"></div>
-
-
-        <div className="container">
-          <div className="row y-gap-30 items-center justify-between">
-            <div data-anim-child="slide-up delay-2" className="col-xl-5 col-lg-6">
-              <h2 className="text-30 lh-15">Download the App</h2>
-              <p className="text-dark-1 pr-40 lg:pr-0 mt-15 sm:mt-5">Book in advance or last-minute with GoTrip. Receive instant confirmation. Access your booking info offline.</p>
-
-              <div className="row y-gap-20 items-center pt-30 sm:pt-10">
-                <div className="col-auto">
-                  <div className="d-flex items-center px-20 py-10 rounded-8 border-white-15 text-white bg-dark-3">
-                    <div className="icon-apple text-24"></div>
-                    <div className="ml-20">
-                      <div className="text-14">Download on the</div>
-                      <div className="text-15 lh-1 fw-500">Apple Store</div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="col-auto">
-                  <div className="d-flex items-center px-20 py-10 rounded-8 border-white-15 text-white bg-dark-3">
-                    <div className="icon-play-market text-24"></div>
-                    <div className="ml-20">
-                      <div className="text-14">Get in on</div>
-                      <div className="text-15 lh-1 fw-500">Google Play</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div data-anim-child="slide-up delay-3" className="col-lg-6">
-              <img src="img/app/1.png" alt="image" />
-            </div>
-          </div>
-        </div>
-      </section>
 
 
       <section className="layout-pt-lg layout-pb-lg">

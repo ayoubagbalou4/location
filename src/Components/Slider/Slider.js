@@ -5,15 +5,15 @@ const Slider = () => {
 
     <section data-anim-wrap className="masthead -type-8">
       <div data-anim-child="fade" className="masthead__bg">
-        <img src="img/masthead/8/bg.png" alt="image" className="col-12 h-full object-cover"/>
+          <img src="img/masthead/8/4884794.jpg" alt="image" className="col-12 h-full object-cover"/>
       </div>
 
       <div className="container">
         <div className="row justify-center">
           <div className="col-xl-10">
             <div className="text-center">
-              <h1 data-anim-child="slide-up delay-5" className="text-60 lg:text-40 md:text-30 text-dark-1">Search for the Best Car Hire Deals</h1>
-              <p data-anim-child="slide-up delay-6" className="text-dark-1 mt-5">Book better cars from local hosts across the US and around the world.</p>
+              <h1 className="text-60 lg:text-40 md:text-30 text-dark-1">Location de Voiture Premium<br/>Voyagez en Liberté, Voyagez Serein</h1>
+              <p className="text-dark-1 mt-5">Notre flotte internationale de véhicules récents vous attend, avec des tarifs exclusifs et une réservation 100% flexible.</p>
             </div>
           </div>
         </div>
@@ -26,10 +26,10 @@ const Slider = () => {
             <div className="searchMenu-loc px-30 lg:py-20 lg:px-0 js-form-dd js-liverSearch">
 
               <div data-x-dd-click="searchMenu-loc">
-                <h4 className="text-15 fw-500 ls-2 lh-16">Pick up location</h4>
+                <h4 className="text-15 fw-500 ls-2 lh-16">Lieu de prise en charge</h4>
 
                 <div className="text-15 text-light-1 ls-2 lh-16">
-                  <input autocomplete="off" type="search" placeholder="City or Airport" className="js-search js-dd-focus" />
+                  <input autoComplete="off" type="search" placeholder="City or Airport" className="js-search js-dd-focus" />
                 </div>
               </div>
 
@@ -110,7 +110,7 @@ const Slider = () => {
                 <h4 className="text-15 fw-500 ls-2 lh-16">Drop off location</h4>
 
                 <div className="text-15 text-light-1 ls-2 lh-16">
-                  <input autocomplete="off" type="search" placeholder="City or Airport" className="js-search js-dd-focus" />
+                  <input autoComplete="off" type="search" placeholder="City or Airport" className="js-search js-dd-focus" />
                 </div>
               </div>
 

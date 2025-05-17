@@ -3,16 +3,18 @@ import React from 'react';
 const Navbar = () => {
   return (
    <>
+    <div class="header-margin"></div>
 
-    <header data-add-bg="bg-white" className="header  js-header" data-x="header" data-x-toggle="is-menu-opened">
-        <div data-anim="fade" className="header__container header__container-1500 mx-auto px-30 sm:px-20">
+    
+    <header data-add-bg="bg-dark-1" className="header bg-dark-1 js-header " data-x="header" data-x-toggle="is-menu-opened">
+        <div data-anim="fade" className="header__container px-30 sm:px-20">
             <div className="row justify-between items-center">
 
             <div className="col-auto">
                 <div className="d-flex items-center">
-                <a href="index.html" className="header-logo mr-50" data-x="header-logo" data-x-toggle="is-logo-dark">
-                    {/* <img src="img/general/logo-dark-2.svg" alt="logo icon">
-                    <img src="img/general/logo-dark-2.svg" alt="logo icon"> */}
+                <a href="index.html" className="header-logo mr-20" data-x="header-logo" data-x-toggle="is-logo-dark">
+                    <img src="img/general/logo-light.svg" alt="logo icon"/>
+                    <img src="img/general/logo-dark.svg" alt="logo icon"/>
                 </a>
 
 
@@ -23,7 +25,7 @@ const Navbar = () => {
                     <div className="mobile-bg js-mobile-bg"></div>
 
                     <div className="menu js-navList">
-                        <ul className="menu__nav text-dark-1 fw-500 -is-active">
+                        <ul className="menu__nav text-white -is-active">
 
                         <li className="menu-item-has-children">
                             <a data-barba href="#">
@@ -147,10 +149,10 @@ const Navbar = () => {
                                     </div>
 
                                     <div className="mega__image d-flex relative">
-                                        {/* <img src="#" data-src="img/backgrounds/7.png" alt="image" className="rounded-4 js-lazy"> */}
+                                        <img src="#" data-src="img/backgrounds/7.png" alt="image" className="rounded-4 js-lazy"/>
 
                                         <div className="absolute w-full h-full px-30 py-24">
-                                        <div className="text-22 fw-500 lh-15 text-white">Things to do on <br /> your trip</div>
+                                        <div className="text-22 fw-500 lh-15 text-white">Things to do on <br/> your trip</div>
                                         <button className="button h-50 px-30 -blue-1 text-dark-1 bg-white mt-20">Experinces</button>
                                         </div>
                                     </div>
@@ -186,10 +188,10 @@ const Navbar = () => {
                                     </div>
 
                                     <div className="mega__image d-flex relative">
-                                        {/* <img src="img/backgrounds/7.png" alt="image" className="rounded-4"> */}
+                                        <img src="img/backgrounds/7.png" alt="image" className="rounded-4"/>
 
                                         <div className="absolute w-full h-full px-30 py-24">
-                                        <div className="text-22 fw-500 lh-15 text-white">Things to do on <br /> your trip</div>
+                                        <div className="text-22 fw-500 lh-15 text-white">Things to do on <br/> your trip</div>
                                         <button className="button h-50 px-30 -blue-1 text-dark-1 bg-white mt-20">Experinces</button>
                                         </div>
                                     </div>
@@ -225,10 +227,10 @@ const Navbar = () => {
                                     </div>
 
                                     <div className="mega__image d-flex relative">
-                                        {/* <img src="img/backgrounds/7.png" alt="image" className="rounded-4"> */}
+                                        <img src="img/backgrounds/7.png" alt="image" className="rounded-4"/>
 
                                         <div className="absolute w-full h-full px-30 py-24">
-                                        <div className="text-22 fw-500 lh-15 text-white">Things to do on <br /> your trip</div>
+                                        <div className="text-22 fw-500 lh-15 text-white">Things to do on <br/> your trip</div>
                                         <button className="button h-50 px-30 -blue-1 text-dark-1 bg-white mt-20">Experinces</button>
                                         </div>
                                     </div>
@@ -264,10 +266,10 @@ const Navbar = () => {
                                     </div>
 
                                     <div className="mega__image d-flex relative">
-                                        {/* <img src="img/backgrounds/7.png" alt="image" className="rounded-4"> */}
+                                        <img src="img/backgrounds/7.png" alt="image" className="rounded-4"/>
 
                                         <div className="absolute w-full h-full px-30 py-24">
-                                        <div className="text-22 fw-500 lh-15 text-white">Things to do on <br />  your trip</div>
+                                        <div className="text-22 fw-500 lh-15 text-white">Things to do on <br/> your trip</div>
                                         <button className="button h-50 px-30 -blue-1 text-dark-1 bg-white mt-20">Experinces</button>
                                         </div>
                                     </div>
@@ -303,10 +305,10 @@ const Navbar = () => {
                                     </div>
 
                                     <div className="mega__image d-flex relative">
-                                        {/* <img src="img/backgrounds/7.png" alt="image" className="rounded-4"> */}
+                                        <img src="img/backgrounds/7.png" alt="image" className="rounded-4"/>
 
                                         <div className="absolute w-full h-full px-30 py-24">
-                                        <div className="text-22 fw-500 lh-15 text-white">Things to do on <br /> your trip</div>
+                                        <div className="text-22 fw-500 lh-15 text-white">Things to do on <br/> your trip</div>
                                         <button className="button h-50 px-30 -blue-1 text-dark-1 bg-white mt-20">Experinces</button>
                                         </div>
                                     </div>
@@ -342,10 +344,10 @@ const Navbar = () => {
                                     </div>
 
                                     <div className="mega__image d-flex relative">
-                                        {/* <img src="img/backgrounds/7.png" alt="image" className="rounded-4"> */}
+                                        <img src="img/backgrounds/7.png" alt="image" className="rounded-4"/>
 
                                         <div className="absolute w-full h-full px-30 py-24">
-                                        <div className="text-22 fw-500 lh-15 text-white">Things to do on <br /> your trip</div>
+                                        <div className="text-22 fw-500 lh-15 text-white">Things to do on <br/> your trip</div>
                                         <button className="button h-50 px-30 -blue-1 text-dark-1 bg-white mt-20">Experinces</button>
                                         </div>
                                     </div>
@@ -368,10 +370,10 @@ const Navbar = () => {
                                     </div>
 
                                     <div className="mega__image d-flex relative">
-                                        {/* <img src="img/backgrounds/7.png" alt="image" className="rounded-4"> */}
+                                        <img src="img/backgrounds/7.png" alt="image" className="rounded-4"/>
 
                                         <div className="absolute w-full h-full px-30 py-24">
-                                        <div className="text-22 fw-500 lh-15 text-white">Things to do on <br /> your trip</div>
+                                        <div className="text-22 fw-500 lh-15 text-white">Things to do on <br/> your trip</div>
                                         <button className="button h-50 px-30 -blue-1 text-dark-1 bg-white mt-20">Experinces</button>
                                         </div>
                                     </div>
@@ -656,18 +658,35 @@ const Navbar = () => {
 
             <div className="col-auto">
                 <div className="d-flex items-center">
-                <div className="mr-15 xxl:d-none">
-                    <button className="text-26 text-dark-1">
-                    <div className="icon-search"></div>
+
+                <div className="row x-gap-20 items-center xxl:d-none">
+                    <div className="col-auto">
+                    <button className="d-flex items-center text-14 text-white" data-x-click="currency">
+                        <span className="js-currencyMenu-mainTitle">USD</span>
+                        <i className="icon-chevron-sm-down text-7 ml-10"></i>
                     </button>
+                    </div>
+
+                    <div className="col-auto">
+                    <div className="w-1 h-20 bg-white-20"></div>
+                    </div>
+
+                    <div className="col-auto">
+                    <button className="d-flex items-center text-14 text-white" data-x-click="lang">
+                        <img src="img/general/lang.png" alt="image" className="rounded-full mr-10"/>
+                        <span className="js-language-mainTitle">United Kingdom</span>
+                        <i className="icon-chevron-sm-down text-7 ml-15"></i>
+                    </button>
+                    </div>
                 </div>
+
 
                 <div className="d-flex items-center ml-20 is-menu-opened-hide md:d-none">
-                    <a href="login.html" className="button px-30 fw-400 text-14 -blue-1 bg-dark-1 h-50 text-white">Become An Expert</a>
-                    <a href="signup.html" className="button px-30 fw-400 text-14 border-dark-1 -blue-1 h-50 text-dark-1 ml-20">Sign In / Register</a>
+                    <a href="login.html" className="button px-30 fw-400 text-14 -white bg-white h-50 text-dark-1">Become An Expert</a>
+                    <a href="signup.html" className="button px-30 fw-400 text-14 border-white -outline-white h-50 text-white ml-20">Sign In / Register</a>
                 </div>
 
-                <div className="d-none xl:d-flex x-gap-20 items-center pl-30" data-x="header-mobile-icons" data-x-toggle="text-dark-1">
+                <div className="d-none xl:d-flex x-gap-20 items-center pl-30 text-white" data-x="header-mobile-icons" data-x-toggle="text-white">
                     <div><a href="login.html" className="d-flex items-center icon-user text-inherit text-22"></a></div>
                     <div><button className="d-flex items-center icon-menu text-inherit text-20" data-x-click="html, header, header-logo, header-mobile-icons, mobile-menu"></button></div>
                 </div>
@@ -676,8 +695,7 @@ const Navbar = () => {
 
             </div>
         </div>
-    </header>
-
+        </header>
 
     </>
     );

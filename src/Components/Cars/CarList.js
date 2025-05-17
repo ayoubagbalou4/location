@@ -191,7 +191,7 @@ const Carlist = () => {
                                 <h4 className="text-15 fw-500 ls-2 lh-16">Drop off location</h4>
 
                                 <div className="text-15 text-light-1 ls-2 lh-16">
-                                <input autocomplete="off" type="search" placeholder="City or Airport" className="js-search js-dd-focus" />
+                                <input autoComplete="off" type="search" placeholder="City or Airport" className="js-search js-dd-focus" />
                                 </div>
                             </div>
 

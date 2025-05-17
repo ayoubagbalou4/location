@@ -96,8 +96,10 @@ const SingleCar = () => {
 
 
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+
+
+
+    const handleSubmit = async (method) => {
         setError('');
         setSuccess('');
 
@@ -122,16 +124,27 @@ const SingleCar = () => {
 
             console.log("Submitting:", submissionData);
 
-            const response = await axios.post('/api/reservations', submissionData);
 
-            if(response.data.message){
+            if (method === 'whatsapp') {
+                const message = `Bonjour, je souhaite réserver le véhicule ${car?.marque} du ${submissionData.date_depart} au ${submissionData.date_fin}. Montant total: ${formData.montant_total} Dhs. Merci de me confirmer la disponibilité. Cordialement. Ce message provient de la plateforme`;
+                window.open(`https://wa.me/${submissionData.numero_tel}?text=${encodeURIComponent(message)}`, '_blank');
+            } else if (method === 'sms') {
+                window.open(`sms:+${submissionData.numero_tel}?body=${encodeURIComponent(`Réservation ${car?.marque} ${submissionData.numero_tel} à ${submissionData.date_fin}`)}`, '_blank');
+            } else if (method === 'call') {
+                window.open('tel:+${submissionData.date_depart}', '_blank');
+            }
+
+            const response = await axios.post('/api/reservations', submissionData);
+            setSuccess('Réservation effectuée avec succès!');
+
+            if (response.data.message) {
                 Swal.fire({
                     icon: 'success',
                     title: 'Success!',
                     text: 'Reservation created successfully!',
                     confirmButtonColor: '#3085d6'
                 });
-    
+
                 setFormData({});
             }
 
@@ -293,7 +306,7 @@ const SingleCar = () => {
                                     </div>
 
                                     {/* --- Booking Form --- */}
-                                    <form onSubmit={handleSubmit}>
+                                    <form>
                                         <div className="row y-gap-20 pt-20">
 
                                             {/* Pick up Date */}
@@ -348,7 +361,7 @@ const SingleCar = () => {
                                                         value={formData.numero_tel}
                                                         onChange={handleChange}
                                                         className="text-15 text-light-1 ls-2 lh-16 mt-1 w-100 border-0"
-                                                        
+
                                                     />
                                                 </div>
                                             </div>
@@ -364,7 +377,7 @@ const SingleCar = () => {
                                                         value={formData.date_naissance}
                                                         onChange={handleChange}
                                                         className="text-15 text-light-1 ls-2 lh-16 mt-1 w-100 border-0"
-                                                        
+
                                                     />
                                                 </div>
                                             </div>
@@ -414,16 +427,47 @@ const SingleCar = () => {
                                             )}
 
 
-                                            {/* Submit Button */}
+                                            {/* Reservation Buttons */}
                                             <div className="col-12 mt-20">
+                                                <div className="d-flex flex-column y-gap-15">
+                                                    <button
+                                                        type="button"
+                                                        onClick={() => handleSubmit('whatsapp')}
+                                                        className="button -dark-1 py-15 px-35 h-60 col-12 rounded-4 bg-whatsapp text-white"
+                                                    >
+                                                        Réserver par WhatsApp
+                                                    </button>
+
+                                                    <button
+                                                        type="button"
+                                                        onClick={() => handleSubmit('call')}
+                                                        className="button -dark-1 py-15 px-35 h-60 col-12 rounded-4 bg-appel text-white"
+                                                    >
+                                                        Réserver par appel
+                                                    </button>
+
+                                                    <button
+                                                        type="button"
+                                                        onClick={() => handleSubmit('sms')}
+                                                        className="button -dark-1 py-15 px-35 h-60 col-12 rounded-4 bg-sms text-white"
+                                                    >
+                                                        Réserver par SMS
+                                                    </button>
+                                                </div>
+                                            </div>
+
+
+
+                                            {/* Submit Button */}
+                                            {/* <div className="col-12 mt-20">
                                                 <button
                                                     type="submit"
                                                     className="button -dark-1 py-15 px-35 h-60 col-12 rounded-4 bg-yellow-1 text-dark-1"
                                                     disabled={success}
-                                                >
-                                                    {success ? 'Booked!' : 'Book Now'}
-                                                </button>
-                                            </div>
+                                                > */}
+                                            {/* {success ? 'Booked!' : 'Book Now'} */}
+                                            {/* </button> */}
+                                            {/* </div> */}
                                         </div>
                                     </form>
                                 </div>
@@ -1185,8 +1229,6 @@ const SingleCar = () => {
             </section>
 
             <div className="layout-pt-lg"></div>
-
-
 
         </>
     );
